@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --bg-body: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  --bg-main: #fff;
+  --bg-furtune: #E4EDF1;
+  --bg-buttton: #FF9500;
+  --txtcolor-titleAndSub: #34355B;
+  --txtcolor-furtune: #000;
+  --txtcolor-button: #fff;
+
+  /* font family */
+  --ff-title: 'Montserrat', sans-serif;
+  --ff-subtitleAndButton: 'DM Sans', sans-serif;
+  --ff-fortune: 'Handlee', cursive; 
+
+  /* font size */
+  font-size: 62.5%;
+  --fs-title: 2.4rem;
+  --fs-subtitleAndButton: 1.5rem;
+  --fs-fortune: 2.4rem;
+
+  /* font weight */
+  --fw-titleAndButton: 700;
+  --fw-subtitleAndFortune: 400;
+}
+
+
+.hide {
+  display: none;
+}
+
+body {
+  background: var(--bg-body);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--bg-main);
+  width: min(42.8rem, 90%);
+  height: fit-content;
+  padding: 4.8rem 6.4rem;
+  box-shadow: 0rem 2.0rem 5.0rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+  text-align: center;
+}
+
+/* Screen 1 */
+
+main h1{
+  font-family: var(--ff-title);
+  font-weight: var(--fw-titleAndButton);
+  color: var(--txtcolor-titleAndSub);
+  font-size: var(--fs-title);
+  line-height: 2.9rem;
+  margin-bottom: 1.7rem;
+}
+
+.screen1 p {
+  font-family: var(--ff-subtitleAndButton);
+  font-weight: var(--fw-subtitleAndFortune);
+  color: var(--txtcolor-titleAndSub);
+  font-size: var(--fs-subtitleAndButton);
+  line-height: 1.9rem;
+  margin-bottom: 2.0rem;
+}
+
+.cookie1 {
+  width: min(26.4rem, 100%)
+}
+
+.cookie1:hover {
+  animation: shake .8s infinite ease-in;
+}
+
+/* Screen 2 */
+
+.screen2 p {
+  font-family: var(--ff-fortune);
+  font-weight: var(--fw-subtitleAndFortune);
+  color: var(--txtcolor-furtune);
+  font-size: var(--fs-fortune);
+  line-height: 2.8rem;
+
+  background: var(--bg-furtune);
+  width: min(29.3rem, 100%);
+  padding: 1.0rem;
+  margin-bottom: 1.7rem;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+  animation: riseUp 1.5s ease-in-out;
+
+  transition:  0.5s;
+}
+.screen2 p:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 8px 10px rgba(43, 43, 43, 0.658);
+}
+
+.cookie2 {
+  width: min(26.4rem, 100%);
+  animation: shake 13s infinite ease;
+}
+
+button {
+  background-color: var(--bg-buttton);
+  padding: 1.6rem;
+  border: none;
+  border-radius: .4rem;
+  color: var(--txtcolor-button);
+  font-family: var(--ff-subtitleAndButton);
+  font-weight: var(--fw-titleAndButton);
+  line-height: 1.9rem;
+  text-align: center;
+  animation: appear 1s 1.2s backwards ease-in-out;
+  transition:  0.5s;
+}
+
+button:hover {
+  background-color: #ffa323;
+  transform: scale(1.1);
+  box-shadow: 2px 8px 10px rgba(43, 43, 43, 0.658);
+}
+
+/* Animations */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes riseUp {
+  0% {
+    opacity: 0;
+    transform: translateY(150px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes appear {
+  
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
