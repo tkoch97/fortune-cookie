@@ -75,7 +75,8 @@ main h1{
 }
 
 .cookie1 {
-  width: min(26.4rem, 100%)
+  width: min(26.4rem, 100%);
+  cursor: pointer;
 }
 
 .cookie1:hover {
@@ -84,7 +85,7 @@ main h1{
 
 /* Screen 2 */
 
-.screen2 p {
+#fortunePhrase {
   font-family: var(--ff-fortune);
   font-weight: var(--fw-subtitleAndFortune);
   color: var(--txtcolor-furtune);
@@ -97,11 +98,11 @@ main h1{
   margin-bottom: 1.7rem;
   box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
 
-  animation: riseUp 1.5s ease-in-out;
+  animation: riseUp 1s ease-in-out;
 
   transition:  0.5s;
 }
-.screen2 p:hover {
+#fortunePhrase:hover {
   transform: scale(1.1);
   box-shadow: 2px 8px 10px rgba(43, 43, 43, 0.658);
 }
@@ -121,6 +122,7 @@ button {
   font-weight: var(--fw-titleAndButton);
   line-height: 1.9rem;
   text-align: center;
+  cursor: pointer;
   animation: appear 1s 1.2s backwards ease-in-out;
   transition:  0.5s;
 }
@@ -129,6 +131,21 @@ button:hover {
   background-color: #ffa323;
   transform: scale(1.1);
   box-shadow: 2px 8px 10px rgba(43, 43, 43, 0.658);
+}
+
+footer {
+  color: #fff;
+  font-family: var(--ff-title);
+  display: flex;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  color: #FF9500;
 }
 
 /* Animations */
